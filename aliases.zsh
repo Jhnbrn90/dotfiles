@@ -6,9 +6,10 @@ alias reloadcli="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias c="clear"
 alias path="echo $PATH | sed 's/:/\'$'\n/g'"
+alias edal="vim $DOTFILES/aliases.zsh"
 
 # Folders
-alias co="cd $HOME/Code"
+alias proj="cd $HOME/projects"
 alias dotfiles="cd $DOTFILES"
 
 # Development
@@ -17,6 +18,4 @@ alias cfresh="rm -rf vendor/ && composer install"
 alias bps="brew-php-switcher"
 
 # Docker
-alias dcm="docker-compose"
-alias dcr="docker-compose run --rm"
-alias dex="docker exec -it"
+alias dx="docker-compose"

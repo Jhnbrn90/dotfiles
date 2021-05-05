@@ -1,6 +1,5 @@
 # Taps
 tap 'caskroom/cask'
-tap 'caskroom/fonts'
 
 # Binaries
 brew 'bash'
@@ -27,43 +26,16 @@ brew 'php'
 brew 'redis'
 
 # Applications
-cask '1password'
-cask 'adobe-creative-cloud'
 cask 'alfred'
-cask 'backblaze'
-cask 'background-music'
-cask 'cheatsheet'
-cask 'dash'
 cask 'docker'
-cask 'dropbox'
-cask 'fliqlo'
-cask 'flux'
-cask 'google-backup-and-sync'
-cask 'google-chrome'
 cask 'gpg-suite'
-cask 'hyperswitch'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'jetbrains-toolbox'
-cask 'kap'
 cask 'karabiner-elements'
-cask 'omnidisksweeper'
-# cask 'phpstorm' --- install via jetbrains-toolbox
-cask 'pock'
 cask 'postman'
-cask 'sequel-pro'
-cask 'slack'
-cask 'smooze'
 cask 'spectacle'
-cask 'spotify'
-cask 'sublime-text'
 cask 'viscosity'
-cask 'vlc'
-cask 'whatsapp'
-
-# Fonts
-cask 'font-fira-code' 		# https://github.com/tonsky/FiraCode
-cask 'font-source-code-pro'	# https://github.com/adobe-fonts/source-code-pro
 
 # Mac App Store Applications
 mas 'amphetamine', id: 937984704

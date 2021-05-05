@@ -36,7 +36,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export GOPATH="$HOME/Code/go"
+export GOPATH="$HOME/projects/go"
 
 source $DOTFILES/path.zsh
 source $DOTFILES/aliases.zsh

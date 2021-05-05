@@ -1,7 +1,7 @@
 #!/bin/sh
 
-USER_NAME="Sven Luijten"
-USER_EMAIL="svenluijten1995@gmail.com"
+USER_NAME="John Braun"
+USER_EMAIL="john@brn.email"
 
 echo "Setting up your Mac."
 
@@ -30,8 +30,8 @@ cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
 echo "Changing the default shell to 'zsh'..."
 chsh -s $(which zsh)
 
-echo "Creating $HOME/Code..."
-mkdir $HOME/Code
+echo "Creating $HOME/projects..."
+mkdir $HOME/projects
 
 echo "Installing required PHP extensions..."
 pecl install memcached imagick
@@ -75,7 +75,7 @@ if [[ ! -f $HOME/.ssh/id_ed25519 ]]; then
 fi
 
 echo "Setting up Go environment..."
-mkdir -p $HOME/Code/go
+mkdir -p $HOME/projects/go
 
 # Set macOS preferences.
 # We will run this last because this will reload the shell.
