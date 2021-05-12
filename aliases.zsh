@@ -18,6 +18,9 @@ alias cfresh="rm -rf vendor/ && composer install"
 alias nfresh="rm -rf node_modules && npm install"
 alias yfresh="rm -rf node_modules && yarn"
 alias bps="brew-php-switcher"
+alias v="vagrant"
+alias p="./vendor/bin/phpunit"
+alias pf="./vendor/bin/phpunit --filter"
 
 # Docker
 alias dx="docker-compose"
