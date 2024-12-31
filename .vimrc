@@ -6,6 +6,8 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-sensible'
 Plugin 'preservim/nerdtree'
 Plugin 'cormacrelf/vim-colors-github'
 Plugin 'joshdick/onedark.vim'
@@ -13,6 +15,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-rooter'
 Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 " Editor configuration
 filetype plugin indent on " Detect file types for plugin loading
@@ -46,11 +49,12 @@ let g:Powerline_symbols='fancy'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers=['eslint'] " Use ESLint for JavaScript linting
+" let g:syntastic_javascript_checkers=['eslint'] " Use ESLint for JavaScript linting
+" let g:syntastic_python_checkers=['mypy']
 " Search configuration
 if executable('ag')
  " Use `ag` in Ctrl-P for listing files (fast and respects `.gitignore`)
- let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git --ignore **/*.pyc -g ""'
+ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
  " `ag` is fast enough that Ctrl-P does not need to cache
  let g:ctrlp_use_caching = 0
  " Use `ag` instead of `grep` for regular search queries
@@ -64,4 +68,8 @@ endif
 " Make configuration (to show errors automatically in a subwindow)
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost l* nested lwindow
-
+" Allow folding of code
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
