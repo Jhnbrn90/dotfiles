@@ -30,6 +30,7 @@ set incsearch " Incremental searching
 set hlsearch " Highlight all results
 set history=1000 " Remember more commands and search history
 set undolevels=1000 " Use many levels of undo
+set splitright
 nnoremap W <C-w><C-w>
 imap jj <Esc>
 " Colorscheme configuration
