@@ -10,6 +10,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-sensible'
 Plugin 'preservim/nerdtree'
 Plugin 'cormacrelf/vim-colors-github'
+Plugin 'chriskempson/base16-vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -33,10 +34,12 @@ set undolevels=1000 " Use many levels of undo
 set splitright
 nnoremap W <C-w><C-w>
 imap jj <Esc>
+imap kk <Esc>
 " Colorscheme configuration
-" set background=light
+set background=light
 set termguicolors
-colorscheme onedark
+colorscheme base16-one-light
+" colorscheme onedark  # Dark theme
 " Nerdtree configuration
 autocmd vimenter * NERDTree | wincmd w " Open the tree on startup and move focus to the file buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Close the tree if it is the only remaining buffer
@@ -62,7 +65,7 @@ if executable('ag')
  set grepprg=ag\ --nocolor\ --vimgrep
  " Allow using the `\` key or the `Ag` command to find usages of any given word
  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
- nnoremap \ :Ag<SPACE>
+ nnoremap ` :Ag<SPACE>
  " Allow using the `F` key to find usages of the word under the cursor
  nnoremap F :grep! "<C-R><C-W>"<CR>:cw<CR>
 endif
@@ -74,3 +77,5 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+" Find open buffer in tree
+nnoremap = :NERDTreeFind<CR>
